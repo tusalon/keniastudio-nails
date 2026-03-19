@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Yeney Nails Salón
+// sw.js - Service Worker para KENIA STUDIO NAILS SIEMPRE BELLA
 
-const CACHE_NAME = 'yeney-nails-v1';
+const CACHE_NAME = 'keniastudio-nails-v1';
 const urlsToCache = [
-  '/yeney-nails/',
-  '/yeney-nails/index.html',
-  '/yeney-nails/admin.html',
-  '/yeney-nails/admin-login.html',
-  '/yeney-nails/setup-wizard.html',
-  '/yeney-nails/editar-negocio.html',
-  '/yeney-nails/manifest.json',
-  '/yeney-nails/icons/icon-72x72.png',
-  '/yeney-nails/icons/icon-96x96.png',
-  '/yeney-nails/icons/icon-128x128.png',
-  '/yeney-nails/icons/icon-144x144.png',
-  '/yeney-nails/icons/icon-152x152.png',
-  '/yeney-nails/icons/icon-192x192.png',
-  '/yeney-nails/icons/icon-384x384.png',
-  '/yeney-nails/icons/icon-512x512.png'
+  '/keniastudio-nails/',
+  '/keniastudio-nails/index.html',
+  '/keniastudio-nails/admin.html',
+  '/keniastudio-nails/admin-login.html',
+  '/keniastudio-nails/setup-wizard.html',
+  '/keniastudio-nails/editar-negocio.html',
+  '/keniastudio-nails/manifest.json',
+  '/keniastudio-nails/icons/icon-72x72.png',
+  '/keniastudio-nails/icons/icon-96x96.png',
+  '/keniastudio-nails/icons/icon-128x128.png',
+  '/keniastudio-nails/icons/icon-144x144.png',
+  '/keniastudio-nails/icons/icon-152x152.png',
+  '/keniastudio-nails/icons/icon-192x192.png',
+  '/keniastudio-nails/icons/icon-384x384.png',
+  '/keniastudio-nails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/yeney-nails/icons/icon-192x192.png');
+            return caches.match('/keniastudio-nails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Yeney Nails Salón');
+console.log('✅ Service Worker configurado para KENIA STUDIO NAILS SIEMPRE BELLA');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

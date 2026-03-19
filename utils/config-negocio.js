@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Yeney Nails Salón
+// CLIENTE: KENIA STUDIO NAILS SIEMPRE BELLA
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '4044469d-c34a-497b-98fc-a11106cd8666'; // ID de Yeney Nails Salón
+const NEGOCIO_ID_POR_DEFECTO = '2ef86a1c-9e11-4149-997b-ee494e5bcf37'; // ID de KENIA STUDIO NAILS SIEMPRE BELLA
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Yeney Nails Salón';
+    return config?.nombre || 'KENIA STUDIO NAILS SIEMPRE BELLA';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '52831452';
+    return config?.telefono || '54196722';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'oshungere81@gmail.com';
+    return config?.email || 'charchabalk@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Yeney Nails Salón!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a KENIA STUDIO NAILS SIEMPRE BELLA!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'yeney-nails';
+    return config?.ntfy_topic || 'keniastudio-nails';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Yeney Nails Salón');
+console.log('✅ config-negocio.js listo para KENIA STUDIO NAILS SIEMPRE BELLA');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
